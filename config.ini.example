@@ -1,0 +1,34 @@
+; 摄像头相关配置
+[camera]
+device_path = /dev/video0
+width = 640
+height = 480
+fps = 30
+buffer_count = 4
+
+; 运动检测配置
+[motion]
+diff_threshold = 70
+motion_ratio = 0.40
+trigger_frames = 3
+
+; MQTT 配置
+[mqtt]
+broker_uri = tcp://localhost:1883
+client_id = edgewatcher_001
+topic = edgewatcher/alert
+keepalive = 60
+
+; 短信告警
+[sms]
+uart_path = /dev/ttymxc5
+phone_number = +8600000000000
+
+; GPIO
+[gpio]
+led_pin = 131
+
+; LCD
+[lcd]
+device_path = /dev/fb0
+refresh_ms = 200

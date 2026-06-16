@@ -1,0 +1,42 @@
+# 编译产物
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+*.dylib
+
+# Qt 构建产物
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+Makefile
+*.pro.user
+*.pro.user.*
+
+# CodeGraph 本地数据
+.codegraph/*.db
+.codegraph/*.db-wal
+.codegraph/*.db-shm
+.codegraph/*.log
+.codegraph/cache/
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 配置文件 (含敏感信息，提供模板代替)
+config.ini
+
+# Claude 本地设置
+.claude/settings.local.json
+
+# 构建目录
+build/
+obj/
+bin/

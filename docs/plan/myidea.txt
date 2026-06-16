@@ -1,0 +1,24 @@
+QT界面：
+	Watcher     running  
+
+	    画面	   PEOPLE
+
+			   Warnning
+
+QT界面始终运行在开发板上
+		当摄像头运行时 running亮 
+		检测到人时 PEOPLE 亮 
+		当警报时 开发板上的硬件LED亮、BEEP响，然后QT的Warnning亮
+
+具体有几个点：
+	1.QT界面
+	2.camera_lcd
+	3.如何检测人物？ 不一定要实现，如果不好做的话可以留出接口便于扩展
+	4.帧差法判断是否摔倒，这个判断应该是个什么程序？
+	5.摔倒后，led flash，beep ring，这里是不是要把数据传到两个地方，还要传回到QT
+	6.留出足够的扩展接口，比如？：
+		1）识别人物，家里有多个老人，可以更好识别出是哪个老人
+		2）remote connect to phone，警报给手机/自动拨打120，like iphone/applewatch crush detection
+		3）接入更强大的ai识别摔倒
+
+报警后必须要手动确认，才会取消报警 继续工作
