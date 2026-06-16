@@ -532,11 +532,11 @@ SHM_OUTPUT_INIT SUCCESS
 
 ### Q1：为什么不用 OpenCV？
 
-OpenCV 交叉编译到 ARM 平台极其痛苦（依赖 libstdc++、zlib、libpng 等十几个库），而且 `cv::BackgroundSubtractor` 对 i.MX 6ULL 来说太重。帧差法几十行 C 代码就能搞定，代码更精简，面试官也更认可"自己实现的算法"而非"调个 API"。
+OpenCV 交叉编译到 ARM 平台极其痛苦（依赖 libstdc++、zlib、libpng 等十几个库），而且 `cv::BackgroundSubtractor` 对 i.MX 6ULL 来说太重。帧差法几十行 C 代码就能搞定，不引入大型库，依赖更可控。
 
 ### Q2：为什么 YUYV 转 RGB 要手写而不是用 libyuv？
 
-转换逻辑只有几十行代码，引入第三方库反而增加交叉编译复杂度。手写版本可以针对性优化（定点运算、ARM NEON 加速），同时可以在面试时展开讲 BT.601 公式。
+转换逻辑只有几十行代码，引入第三方库反而增加交叉编译复杂度。手写版本可以针对性优化（定点运算、ARM NEON 加速），不依赖第三方库。
 
 ### Q3：为什么用互斥锁 + 条件变量，而不用无锁队列？
 
