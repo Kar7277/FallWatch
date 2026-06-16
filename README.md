@@ -6,7 +6,7 @@
 
 - **视频采集**：V4L2 摄像头驱动，支持 YUYV 格式
 - **运动检测**：基于帧差分的运动检测算法
-- **多重告警**：MQTT 推送、SIM800 短信、GPIO LED 闪烁
+- **多重告警**：MQTT 推送、AIR780E 短信、GPIO LED 闪烁
 - **本地显示**：Framebuffer LCD 实时画面显示
 - **JPEG 截图**：触发时保存现场截图
 - **Qt GUI**：桌面端监控界面（可选）
@@ -16,7 +16,7 @@
 
 - ARM Linux 开发板（如 i.MX6ULL）
 - USB 摄像头（UVC）
-- SIM800 短信模块（UART）
+- AIR780E 短信模块（UART）
 - GPIO LED
 - LCD 屏幕（Framebuffer）
 
